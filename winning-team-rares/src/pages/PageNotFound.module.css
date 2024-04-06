@@ -1,0 +1,13 @@
+.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  .notFound h1 {
+    font-size: 3rem;
+    color: #333; /* Dark gray text color */
+  }
+  
