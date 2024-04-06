@@ -21,7 +21,7 @@ export default function Product() {
             Using AI, we are able to match candidates with the right job opportunities, leading to higher job satisfaction and better career outcomes. Our platform is designed to help job seekers find their right way and achieve their career goals.
           </p>
         </div>
-        <img id="mission" src="img2.png" alt="team brainstorming" />
+        <img id="mission" src="img1.png" alt="team brainstorming" />
       </section>
     </main>
   );
