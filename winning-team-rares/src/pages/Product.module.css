@@ -6,7 +6,7 @@
 
 .product section {
   width: clamp(80rem, 80%, 90rem);
-  margin: 6rem 35%   6rem 35%;
+  margin: 6rem 35% 6rem 35%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7rem;
@@ -29,7 +29,7 @@
 }
 
 .product .formGroup {
-  margin-bottom: 1.5rem; /* Adjust the space between form fields */
+  margin-bottom: 1.5rem;
 }
 
 .product .formGroup textarea {
@@ -57,8 +57,49 @@
     margin: 0 auto;
   }
   
+@media (max-width: 768px) {
+  .product {
+    padding: 2.5rem 1.5rem;
+    background-color: var(--color-dark--1);
+    min-height: 100vh;
+  }
+  
+  .product section {
+    width: 100%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .product h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .product form {
+    width: 100%;
+    max-width: 30rem;
+  }
+  
+  .product .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .product .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product button {
+    width: 100%;
+    max-width: 15rem;
+  }
+}
 
-/* .product button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-} */
+@media (max-width: 480px) {
+  .product img {
+    display: none;
+  }
+}

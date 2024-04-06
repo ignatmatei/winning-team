@@ -37,3 +37,26 @@
 .product section a {
   margin-top: 2rem;
 }
+
+@media (max-width: 768px) {
+  .product section {
+    width: 100%; /* Set width to 100% */
+    margin: auto; /* Center the section */
+  }
+
+  .product img {
+    width: auto;
+    max-width: 100%; /* Ensure image doesn't overflow */
+    /* put the image after the text (bottom of web)
+  }
+
+  .product h2 {
+    margin-right: 0; /* Removed margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .product img {
+    display: none;
+  }
+}

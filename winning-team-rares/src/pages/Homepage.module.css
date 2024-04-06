@@ -32,3 +32,33 @@
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
 }
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 2rem;
+  }
+
+  .homepage section {
+    height: auto;
+  }
+
+  .homepage h1 {
+    font-size: 3rem;
+  }
+
+  .homepage h2 {
+    width: 90%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage h1 {
+    font-size: 2.5rem;
+  }
+
+  .homepage h2 {
+    font-size: 1.2rem;
+  }
+}
