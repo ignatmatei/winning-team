@@ -6,21 +6,21 @@
 
 .product section {
   width: clamp(80rem, 80%, 90rem);
-  margin: 6rem 35% 6rem 35%;
+  margin: 6rem 35%   6rem 35%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7rem;
   align-items: center;
+  text-align: center;
 }
-/* 
-.product img {
-  width: 100%;
-} */
+
 
 .product h2 {
   font-size: 4rem;
   line-height: 1.2;
-  margin: 3rem 3rem 3rem 9rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  text-align: center;
 }
 
 .product p {

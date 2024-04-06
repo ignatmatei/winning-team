@@ -5,16 +5,22 @@
 }
 
 .product section {
-  width: clamp(80rem, 80%, 90rem);
-  margin: 6rem auto;
+  width: clamp(80rem, 80%, 120rem);
+  margin: 9rem 6rem 6rem 24rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 7rem;
   align-items: center;
+  text-align: justify;
+  
 }
 
 .product img {
   width: 100%;
+}
+
+.product img[src="img2.png"] {
+  width: 75%;
 }
 
 .product h2 {
