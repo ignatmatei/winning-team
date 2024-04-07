@@ -1,0 +1,47 @@
+.chat {
+  padding: 2rem 3rem;
+  max-height: 70%;
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  overflow: scroll;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat h6 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--color-light--1);
+}
+
+.chat h3 {
+  font-size: 1.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chat h3 span {
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.chat p {
+  font-size: 1.6rem;
+}
+
+.chat a:link,
+.chat a:visited {
+  font-size: 1.6rem;
+  color: var(--color-brand--1);
+}

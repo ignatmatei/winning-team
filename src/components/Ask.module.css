@@ -1,0 +1,53 @@
+.askContainer {
+  flex: 1;
+  height: 100%;
+  background-color: var(--color-dark--2);
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
+
+.ask {
+  height: 100%;
+}
+.bubble {
+  max-width: 70%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  clear: both;
+}
+
+.left {
+  background-color: #ffffff; /* White */
+  float: left;
+  color: black;
+}
+
+.right {
+  background-color: var(--color-brand--2); /* Green */
+
+  float: right;
+}
+
+.inputBar {
+  /* Style the input bar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.midText {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
