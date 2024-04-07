@@ -184,7 +184,7 @@ function ChatsProvider({ children }) {
         dispatch({ type: 'chat/loaded', payload: updatedChat });
         console.log(prompt);
         const updatePrompts = await fetch(
-          'http://10.200.20.66:8082/api/get_response',
+          'http://localhost:8082/api/get_response',
           {
             method: 'POST',
             headers: {
