@@ -1,0 +1,43 @@
+{
+  "chats": [
+    {
+      "chatName": "Cum sa ma angajez",
+      "date": "2023-12-29T15:59:59.138Z",
+      "user": "Jack",
+      "prompts": {
+        "i-1": "Cum sa ma angajez ca si programator cu 3 ani de experienta?",
+        "r-1": "Trebuie sa fi destept saule",
+        "i-2": "Daca ajung sa fac 3 ani de experienta?",
+        "r-2": "Bravo baiat"
+      },
+      "id": 73930385
+    },
+    {
+      "chatName": "Cum sa ma angajez",
+      "date": "2024-02-30T15:59:59.138Z",
+      "user": "Jack",
+      "prompts": {
+        "i-1": "Cum sa ma angajez ca si programator cu 1 ani de experienta?",
+        "r-1": "Trebuie sa fi destept saule",
+        "i-2": "Daca ajung sa fac 3 ani de experienta?",
+        "r-2": "Bravo baiat",
+        "i-3": "Martafoiunle da daca fac internship?"
+      },
+      "id": 98925768
+    },
+    {
+      "chatName": "jucarii",
+      "date": "2024-04-07T02:03:22.705Z",
+      "user": {
+        "name": "Jack",
+        "email": "jack@example.com",
+        "password": "qwerty",
+        "avatar": "https://i.pravatar.cc/100?u=zz"
+      },
+      "prompts": {
+        "i-1": "salut cum pot sa cumpar jucarii"
+      },
+      "id": "7c9cea1a-b159-4e9a-904b-f207631d868b"
+    }
+  ]
+}

@@ -13,7 +13,6 @@
   flex-direction: column;
   gap: 2rem;
 
-  /* Different from other form */
   width: 48rem;
   margin: 8rem auto;
 }
@@ -31,9 +30,9 @@
 
   .form {
     padding: 1.5rem;
-    width: auto; /* Adjust width to fit smaller screens */
-    margin-top: 4rem; /* Reduce top margin for smaller screens */
-    margin-bottom: 2rem; /* Reduce bottom margin for smaller screens */
+    width: auto;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 }
 

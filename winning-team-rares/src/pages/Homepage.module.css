@@ -33,7 +33,7 @@
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .homepage {
     padding: 2rem;
   }
