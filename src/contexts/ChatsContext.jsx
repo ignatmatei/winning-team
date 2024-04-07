@@ -161,6 +161,19 @@ function ChatsProvider({ children }) {
 
       // Add the new prompt to the chat's prompts
 
+      console.log(prompt);
+      const updatePrompts = await fetch(
+        'http://localhost:8082/api/get_response',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(prompt),
+        },
+      );
+      console.log(updatePrompts);
+
       const updatedChat = {
         ...existingChat,
         prompts: {
@@ -182,18 +195,6 @@ function ChatsProvider({ children }) {
       if (updateResponse.ok) {
         // If successful, dispatch an action to update the state with the updated chat
         dispatch({ type: 'chat/loaded', payload: updatedChat });
-        console.log(prompt);
-        const updatePrompts = await fetch(
-          'http://localhost:8082/api/get_response',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(prompt),
-          },
-        );
-        console.log(updatePrompts);
       } else {
         // If the request was not successful, handle the error accordingly
         throw new Error('Failed to update chat with new prompt');
