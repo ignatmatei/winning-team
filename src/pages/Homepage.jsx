@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import PageNav from "../components/PageNav";
-import styles from "./Homepage.module.css";
+import { Link } from 'react-router-dom';
+import PageNav from '../components/PageNav';
+import styles from './Homepage.module.css';
 
 export default function Homepage() {
   return (
@@ -9,17 +9,17 @@ export default function Homepage() {
 
       <section>
         <h1>
-          You travel the world.
+          Struggling to find a job or position?
           <br />
-          WorldWise keeps track of your adventures.
+          Make it easier today with XenCV.
         </h1>
         <h2>
-          A world map that tracks your footsteps into every chat you can think
-          of. Never forget your wonderful experiences, and show your friends how
-          you have wandered the world.
+          An AI-powered RAG (Retrieval-Augmented Generation) model that analyzes
+          your CV and provides possible positions to apply for based on your
+          skills and experience.
         </h2>
         <Link to="/login" className="cta">
-          Start tracking now
+          Try it now
         </Link>
       </section>
     </main>

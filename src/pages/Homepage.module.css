@@ -1,11 +1,11 @@
 .homepage {
   height: 100vh;
-  
+
   background-image: linear-gradient(
       rgba(36, 42, 46, 0.8),
       rgba(36, 42, 46, 0.8)
     ),
-    url("/bg.jpg");
+    url('/bg.jpg');
   background-size: cover;
   background-position: center;
   padding: 2.5rem 5rem;
@@ -27,8 +27,38 @@
 }
 
 .homepage h2 {
-  width: 90%;
+  width: 70%;
   font-size: 1.9rem;
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .homepage {
+    padding: 2rem;
+  }
+
+  .homepage section {
+    height: auto;
+  }
+
+  .homepage h1 {
+    font-size: 3rem;
+  }
+
+  .homepage h2 {
+    width: 90%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage h1 {
+    font-size: 2.5rem;
+  }
+
+  .homepage h2 {
+    font-size: 1.2rem;
+  }
 }
