@@ -47,6 +47,9 @@ function reducer(state, action) {
     case 'chat/loaded':
       return { ...state, isLoading: false, currentChat: action.payload };
 
+    case 'chat/emptyactive':
+      return { ...state, isLoading: false, currentChat: {} };
+
     case 'chat/deleted':
       return {
         ...state,
@@ -157,6 +160,7 @@ function ChatsProvider({ children }) {
       const existingChat = await response.json();
 
       // Add the new prompt to the chat's prompts
+
       const updatedChat = {
         ...existingChat,
         prompts: {
@@ -178,6 +182,18 @@ function ChatsProvider({ children }) {
       if (updateResponse.ok) {
         // If successful, dispatch an action to update the state with the updated chat
         dispatch({ type: 'chat/loaded', payload: updatedChat });
+        console.log(prompt);
+        const updatePrompts = await fetch(
+          'http://10.200.20.66:8082/api/get_response',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(prompt),
+          },
+        );
+        console.log(updatePrompts);
       } else {
         // If the request was not successful, handle the error accordingly
         throw new Error('Failed to update chat with new prompt');
@@ -203,6 +219,7 @@ function ChatsProvider({ children }) {
         createChat,
         deleteChat,
         addPromptToChat,
+        dispatch,
       }}
     >
       {children}

@@ -9,8 +9,14 @@ import { useAuth } from '../contexts/FakeAuthContext';
 function Ask() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { currentChat, getChat, isLoading, addPromptToChat, createChat } =
-    useChats();
+  const {
+    currentChat,
+    getChat,
+    isLoading,
+    addPromptToChat,
+    createChat,
+    dispatch,
+  } = useChats();
   const [inputValue, setInputValue] = useState('');
   const [title, setTitle] = useState('');
   const { user } = useAuth();
@@ -18,6 +24,8 @@ function Ask() {
   useEffect(() => {
     if (id) {
       getChat(id);
+    } else {
+      dispatch({ type: 'chat/emptyactive', payload: {} });
     }
   }, [id, getChat]);
 
