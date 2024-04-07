@@ -30,8 +30,7 @@ llm = AzureChatOpenAI(
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
 
-input0 = "can you find a job for a marketing manager?"
-input1 = "what was the last question asked?"
+input = sys.argv[1]
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are an AI assistant that helps people find information about the job market. Be as concise as possible, it's very important. If someone asks information unrelated to jobs reply \"SALSA\", except if the question is what was the last question asked. The list of available jobs is " + format_docs(docs)),
     ("user", "{prompt}"),
@@ -41,10 +40,9 @@ rag_chain = (
     | llm
     | StrOutputParser()
 )
-out = rag_chain.invoke({"prompt": input0})
+out = rag_chain.invoke({"prompt": input})
 print (out)
-out = rag_chain.invoke({"prompt": input1})
-print (out)
+print (input)
 #print(rag_chain.invoke({"input": "Describe the job of a software engineer", "context": format_docs(docs)}))
 #output_parser = StrOutputParser()
 #chain = prompt | llm | output_parser

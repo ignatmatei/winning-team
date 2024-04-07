@@ -2,7 +2,12 @@ package com.example.api.controllers;
 
 import com.example.api.entities.User;
 import com.example.api.services.UserService;
+import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import lombok.RequiredArgsConstructor;
+import netscape.javascript.JSObject;
+import org.springframework.boot.jackson.JsonObjectSerializer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,10 +54,14 @@ public class UserController {
         return ResponseEntity.ok(userService.loginUser(username, password));
     }
 
-    @GetMapping("/getresponse")
-    public ResponseEntity<String> getResponse(@RequestBody String prompt) throws IOException, InterruptedException {
+    @PostMapping("/get_response")
+    public ResponseEntity<String> getResponse(@RequestBody String jsonString) throws IOException, InterruptedException {
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder("./hello.sh", prompt);
+            ObjectMapper mapper = new ObjectMapper();
+            Map<String, String> map = mapper.readValue(jsonString, Map.class);
+            String prompt1 = map.get("prompt");
+            ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh","\"" + prompt1 + "\"");
+           // ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh", prompt1);
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(
