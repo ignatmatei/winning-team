@@ -6,9 +6,9 @@
       "user": "Jack",
       "prompts": {
         "i-1": "Cum sa ma angajez ca si programator cu 3 ani de experienta?",
-        "r-1": "Trebuie sa fi destept saule",
+        "r-1": "Trebuie sa fi destept",
         "i-2": "Daca ajung sa fac 3 ani de experienta?",
-        "r-2": "Bravo baiat"
+        "r-2": "Bravo esti tare"
       },
       "id": 73930385
     },
@@ -20,14 +20,13 @@
         "i-1": "Cum sa ma angajez ca si programator cu 1 ani de experienta?",
         "r-1": "Trebuie sa fi destept saule",
         "i-2": "Daca ajung sa fac 3 ani de experienta?",
-        "r-2": "Bravo baiat",
-        "i-3": "Martafoiunle da daca fac internship?"
+        "r-2": "Bravo baiat"
       },
       "id": 98925768
     },
     {
-      "chatName": "jucarii",
-      "date": "2024-04-07T02:03:22.705Z",
+      "chatName": "vreau job",
+      "date": "2024-04-07T07:40:37.598Z",
       "user": {
         "name": "Jack",
         "email": "jack@example.com",
@@ -35,13 +34,16 @@
         "avatar": "https://i.pravatar.cc/100?u=zz"
       },
       "prompts": {
-        "i-1": "salut cum pot sa cumpar jucarii"
+        "i-1": "Cum sa ma angajez ca si programator cu 1 ani de experienta?",
+        "r-1": "Trebuie sa fi destept saule",
+        "i-2": "Daca ajung sa fac 3 ani de experienta?",
+        "r-2": "Bravo baiat"
       },
-      "id": "7c9cea1a-b159-4e9a-904b-f207631d868b"
+      "id": "5fd92c74-d174-4ecf-9ff0-a480fee37816"
     },
     {
-      "chatName": "dada",
-      "date": "2024-04-07T05:08:46.257Z",
+      "chatName": "acasa e bine",
+      "date": "2024-04-07T07:40:51.295Z",
       "user": {
         "name": "Jack",
         "email": "jack@example.com",
@@ -49,21 +51,12 @@
         "avatar": "https://i.pravatar.cc/100?u=zz"
       },
       "prompts": {
-        "i-1": "dadada",
-        "i-1.5": "dada",
-        "i-2": "lala",
-        "i-2.5": "dada",
-        "i-3": "salut",
-        "i-3.5": "lala",
-        "i-4": "da",
-        "i-4.5": "dada",
-        "i-5": "dada",
-        "i-5.5": "dada",
-        "i-6": "daada",
-        "i-6.5": "salut",
-        "i-7": "mama"
+        "i-1": "Cum sa ma angajez ca si programator cu 1 ani de experienta?",
+        "r-1": "Trebuie sa fi destept saule",
+        "i-2": "Daca ajung sa fac 3 ani de experienta?",
+        "r-2": "Bravo baiat"
       },
-      "id": "0143ad80-6b18-4f34-93b5-9409e4b7f8f4"
+      "id": "0f959d87-663e-43dd-b6ab-c9b00c7b83fc"
     }
   ]
 }
