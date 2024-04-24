@@ -42,7 +42,7 @@ rag_chain = (
 )
 out = rag_chain.invoke({"prompt": input})
 print (out)
-print (input)
+print(input)
 #print(rag_chain.invoke({"input": "Describe the job of a software engineer", "context": format_docs(docs)}))
 #output_parser = StrOutputParser()
 #chain = prompt | llm | output_parser

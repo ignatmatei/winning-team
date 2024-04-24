@@ -20,7 +20,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://10.200.20.233:5173")
 public class UserController {
     private final UserService userService;
 
@@ -63,6 +63,40 @@ public class UserController {
             String prompt1 = map.get("prompt");
             ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh","\"" + prompt1 + "\"");
            // ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh", prompt1);
+            StringBuilder output = new StringBuilder();
+            Process process = processBuilder.start();
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line + "\n");
+            }
+            int exitCode = process.waitFor();
+            if (exitCode == 0) {
+                return ResponseEntity.ok(output.toString());
+            } else {
+                return ResponseEntity.ok("An error occurred!");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.ok("An error occurred!");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            return ResponseEntity.ok("An error occurred!");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.ok("An error occurred!");
+        }
+    }
+    @PostMapping("/get_langchain")
+    public ResponseEntity<String> getResponses2(@RequestBody String jsonString)
+    {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            Map<String, String> map = mapper.readValue(jsonString, Map.class);
+            String prompt1 = map.get("prompt");
+            ProcessBuilder processBuilder = new ProcessBuilder("./hello.sh","\"" + prompt1 + "\"");
+            // ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh", prompt1);
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(
