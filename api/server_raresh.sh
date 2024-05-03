@@ -1,3 +1,3 @@
 #/bin/bash
-cd ../
+cd ../../
 conda run -n base python lama.py "$1"
