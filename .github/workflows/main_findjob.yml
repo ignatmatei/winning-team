@@ -44,6 +44,16 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/api/target/*.jar'
+      - name: Upload python scripts for deployment
+        uses: actions/upload-artifact@v3
+        with:
+          name: python-scripts
+          path: '${{ github.workspace }}/*.py'
+      - name: Upload bash scripts for deployment
+        uses: actions/upload-arttifact@v3
+        with:
+          name: bash-scripts
+          path: '${{ github.workspace }}/api/*.sh'
 
   deploy:
     runs-on: ubuntu-latest
@@ -57,7 +67,21 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: java-app
-
+      - name: Download python scripts
+        uses: actions/download-artifact@v3
+        with:
+          name: python-scripts
+      - name: Download bash scripts
+        uses: actions/download-artifact@v3
+        with:
+          name: bash-scripts
+      - uses: actions/checkout@v2
+      - name: Anaconda-Action
+        id: step1
+        uses: fdiblen/anaconda-action@0.1.7
+        with:
+          envName: "base"
+          envFileName: 'environment_droplet.yml'
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
