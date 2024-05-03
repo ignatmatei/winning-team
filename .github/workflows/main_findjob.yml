@@ -50,7 +50,7 @@ jobs:
           name: python-scripts
           path: '${{ github.workspace }}/*.py'
       - name: Upload bash scripts for deployment
-        uses: actions/upload-arttifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: bash-scripts
           path: '${{ github.workspace }}/api/*.sh'
