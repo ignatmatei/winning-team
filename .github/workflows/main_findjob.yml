@@ -83,11 +83,7 @@ jobs:
           env-name: "base"
           env-file-name: 'environment_droplet.yml'
       - name: Unzip stuff
-        run: |
-          unzip bash-scripts
-          unzip python-scripts
-          chmod +x lama.py
-          chmod +x server_raresh.sh
+        run: ls
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
