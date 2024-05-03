@@ -20,7 +20,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://10.200.20.233:5173")
+@CrossOrigin(origins = "http://localhost:8082")
 public class UserController {
     private final UserService userService;
 
@@ -62,7 +62,6 @@ public class UserController {
             Map<String, String> map = mapper.readValue(jsonString, Map.class);
             String prompt1 = map.get("prompt");
             ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh","\"" + prompt1 + "\"");
-           // ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh", prompt1);
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(
