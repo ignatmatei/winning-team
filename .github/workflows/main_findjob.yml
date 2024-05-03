@@ -83,7 +83,9 @@ jobs:
           env-name: "base"
           env-file-name: 'environment_droplet.yml'
       - name: Unzip stuff
-        run: ls
+        run: |
+          ls
+          chmod 777 server_raresh.sh
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
