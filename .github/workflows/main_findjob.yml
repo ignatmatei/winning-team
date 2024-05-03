@@ -49,13 +49,13 @@ jobs:
         with:
           name: python-scripts
           path: '${{ github.workspace }}/*.py'
-          compression-level: 0
+      #    compression-level: 0
       - name: Upload bash scripts for deployment
         uses: actions/upload-artifact@v3
         with:
           name: bash-scripts
           path: '${{ github.workspace }}/api/*.sh'
-          compression-level: 0
+      #    compression-level: 0
 
   deploy:
     runs-on: ubuntu-latest
@@ -78,11 +78,16 @@ jobs:
         with:
           name: bash-scripts
       - name: Anaconda-Action
-   #     id: step1
         uses: fdiblen/anaconda-action@0.1.7
         with:
           env-name: "base"
           env-file-name: 'environment_droplet.yml'
+      - name: Unzip stuff
+        run: |
+          unzip bash-scripts.zip
+          unzip python-scripts.zip
+          chmod +x lama.py
+          chmod +x server_raresh.sh
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
