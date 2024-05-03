@@ -80,8 +80,8 @@ jobs:
         id: step1
         uses: fdiblen/anaconda-action@0.1.7
         with:
-          envName: "base"
-          envFileName: 'environment_droplet.yml'
+          env-name: "base"
+          env-file-name: 'environment_droplet.yml'
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
