@@ -74,17 +74,17 @@ public class UserController {
             if (exitCode == 0) {
                 return ResponseEntity.ok(output.toString());
             } else {
-                return ResponseEntity.ok("An error occurred!");
+                return ResponseEntity.ok("exitCode " + exitCode);
             }
         } catch (IOException e) {
             e.printStackTrace();
-            return ResponseEntity.ok("An error occurred!");
+            return ResponseEntity.ok("An error occurred! + " + e);
         } catch (InterruptedException e) {
             e.printStackTrace();
-            return ResponseEntity.ok("An error occurred!");
+            return ResponseEntity.ok("An error occurred! " + e);
         } catch (Exception e) {
             e.printStackTrace();
-            return ResponseEntity.ok("An error occurred!");
+            return ResponseEntity.ok("An error occurred! - " + e);
         }
     }
     @PostMapping("/get_langchain")
