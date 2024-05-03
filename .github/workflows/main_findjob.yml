@@ -18,6 +18,7 @@ jobs:
       id: step1
       uses: fdiblen/anaconda-action@0.1.7
       with:
+        envName: "base"
         envFileName: 'environment_droplet.yml'
         
   build:
