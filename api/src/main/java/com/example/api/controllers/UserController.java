@@ -61,7 +61,7 @@ public class UserController {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, String> map = mapper.readValue(jsonString, Map.class);
             String prompt1 = map.get("prompt");
-            ProcessBuilder processBuilder = new ProcessBuilder("./server_raresh.sh","\"" + prompt1 + "\"");
+            ProcessBuilder processBuilder = new ProcessBuilder("./api/server_raresh.sh","\"" + prompt1 + "\"");
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(
@@ -94,7 +94,7 @@ public class UserController {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, String> map = mapper.readValue(jsonString, Map.class);
             String prompt1 = map.get("prompt");
-            ProcessBuilder processBuilder = new ProcessBuilder("./server_hello.sh","\"" + prompt1 + "\"");
+            ProcessBuilder processBuilder = new ProcessBuilder("./api/server_hello.sh","\"" + prompt1 + "\"");
             // ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh", prompt1);
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
