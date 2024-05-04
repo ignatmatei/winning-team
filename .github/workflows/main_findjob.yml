@@ -88,6 +88,9 @@ jobs:
           chmod 777 lama.py
           chmod 777 server_raresh.sh
           conda list
+          mkdir scripts
+          mv lama.py scripts/
+          mv server_raresh.sh scripts/ 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
