@@ -43,6 +43,11 @@ jobs:
         with:
           name: bash-scripts
           path: '${{ github.workspace }}/api/*.sh'
+      - name: Upload yml
+        uses: actions/upload-artifact@v3
+        with:
+          name: environment
+          path: '${{ github.workspace }}/*.yml'
 
   deploy:
     runs-on: ubuntu-latest
@@ -64,6 +69,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: bash-scripts
+      - name: Download yml
+        uses: actions/download-artifact@v3
+        with:
+          name: environment
+      
       #- name: Anaconda-Action
       #  uses: fdiblen/anaconda-action@0.1.7
       #  with:
