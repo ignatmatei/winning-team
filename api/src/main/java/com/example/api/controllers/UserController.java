@@ -61,7 +61,7 @@ public class UserController {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, String> map = mapper.readValue(jsonString, Map.class);
             String prompt1 = map.get("prompt");
-            ProcessBuilder ls = new ProcessBuilder("ls", "-lh" , "home/site/wwwroot/");
+           /* ProcessBuilder ls = new ProcessBuilder("ls", "-lh" , "home/site/wwwroot/");
             Process process1 =  ls.start();
             BufferedReader reader1 = new BufferedReader(new InputStreamReader(process1.getInputStream()));
             String line1;
@@ -74,8 +74,8 @@ public class UserController {
                 return ResponseEntity.ok(output1.toString());
             } else {
                 return ResponseEntity.ok("exitCode " + exitCode1);
-            }
-          /*  ProcessBuilder processBuilder = new ProcessBuilder("./server_raresh.sh","\"" + prompt1 + "\"");
+            }*/
+            ProcessBuilder processBuilder = new ProcessBuilder("./home/site/wwwroot/server_raresh.sh","\"" + prompt1 + "\"");
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(
@@ -90,7 +90,7 @@ public class UserController {
             } else {
                 return ResponseEntity.ok("exitCode " + exitCode);
             }
-      */
+      
         } catch (IOException e) {
             e.printStackTrace();
             return ResponseEntity.ok("An error occurred! + " + e);
