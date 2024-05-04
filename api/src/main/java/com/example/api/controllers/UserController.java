@@ -75,7 +75,7 @@ public class UserController {
             } else {
                 return ResponseEntity.ok("exitCode " + exitCode1);
             }
-            ProcessBuilder processBuilder = new ProcessBuilder("./server_raresh.sh","\"" + prompt1 + "\"");
+          /*  ProcessBuilder processBuilder = new ProcessBuilder("./server_raresh.sh","\"" + prompt1 + "\"");
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(
@@ -90,6 +90,7 @@ public class UserController {
             } else {
                 return ResponseEntity.ok("exitCode " + exitCode);
             }
+      */
         } catch (IOException e) {
             e.printStackTrace();
             return ResponseEntity.ok("An error occurred! + " + e);
