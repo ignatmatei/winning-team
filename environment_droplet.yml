@@ -1,4 +1,4 @@
-name: base
+name: mat
 channels:
   - conda-forge
   - defaults
