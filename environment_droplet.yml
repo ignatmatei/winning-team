@@ -1,4 +1,4 @@
-name: mat
+name: matei
 channels:
   - conda-forge
   - defaults
@@ -601,7 +601,7 @@ dependencies:
       - packaging==23.2
       - pinecone-client==3.2.2
       - posthog==3.5.0
-      - protobuf==3.20.3
+      - protobuf==4.21.6
       - pulsar-client==3.4.0
       - pymupdf==1.24.1
       - pymupdfb==1.24.1
