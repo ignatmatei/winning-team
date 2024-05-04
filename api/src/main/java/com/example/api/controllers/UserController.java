@@ -61,7 +61,7 @@ public class UserController {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, String> map = mapper.readValue(jsonString, Map.class);
             String prompt1 = map.get("prompt");
-            ProcessBuilder ls = new ProcessBuilder("ls", "-lh" , "./");
+            ProcessBuilder ls = new ProcessBuilder("ls", "-lh" , "home/site/wwwroot/");
             Process process1 =  ls.start();
             BufferedReader reader1 = new BufferedReader(new InputStreamReader(process1.getInputStream()));
             String line1;
