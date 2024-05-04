@@ -82,11 +82,9 @@ jobs:
         with:
           env-name: "base"
           env-file-name: 'environment_droplet.yml'
-      - name: Unzip stuff
+      - name: See stuff
         run: |
           ls
-          #    unzip server_raresh.sh
-          #    unzip lama.py
           chmod 777 lama.py
           chmod 777 server_raresh.sh
       - name: Deploy to Azure Web App
@@ -96,4 +94,4 @@ jobs:
           app-name: 'findjob'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_49024A1C53B74DF9B2E9CD5E199A3F95 }}
-          package: '*.jar'
+         # package: '*.jar'
