@@ -1,4 +1,4 @@
-name: matei
+name: mate
 channels:
   - conda-forge
   - defaults

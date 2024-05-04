@@ -1,3 +1,3 @@
 #/bin/bash
-#conda run -n base python lama.py "$1"
-which pip
+#
+conda run -n mate python lama.py "$1"
