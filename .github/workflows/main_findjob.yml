@@ -9,18 +9,7 @@ on:
       - main
   workflow_dispatch:
 
-jobs:
-  test_job:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Anaconda-Action
-      id: step1
-      uses: fdiblen/anaconda-action@0.1.7
-      with:
-        envName: "base"
-        envFileName: 'environment_droplet.yml'
-        
+jobs:  
   build:
     runs-on: ubuntu-latest
 
@@ -86,6 +75,8 @@ jobs:
           chmod 777 lama.py
           chmod 777 server_raresh.sh
           conda list
+      - name: Add conda to path
+        run: echo "##vso[task.prependpath]$CONDA/bin"
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
