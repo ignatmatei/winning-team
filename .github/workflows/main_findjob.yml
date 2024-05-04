@@ -77,6 +77,8 @@ jobs:
           conda list
       - name: Add conda to path
         run: echo "##vso[task.prependpath]$CONDA/bin"
+      - name: Create conda env
+        run: conda env create --quiet --file environment_droplet.yml
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
