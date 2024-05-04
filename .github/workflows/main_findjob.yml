@@ -64,17 +64,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: bash-scripts
-      - name: Anaconda-Action
-        uses: fdiblen/anaconda-action@0.1.7
-        with:
-          env-name: "base"
-          env-file-name: 'environment_droplet.yml'
+      #- name: Anaconda-Action
+      #  uses: fdiblen/anaconda-action@0.1.7
+      #  with:
+      #    env-name: "base"
+      #    env-file-name: 'environment_droplet.yml'
       - name: See stuff
         run: |
           ls
           chmod 777 lama.py
           chmod 777 server_raresh.sh
-          conda list
+       #   conda list
       - name: Add conda to path
         run: echo "##vso[task.prependpath]$CONDA/bin"
       - name: Create conda env
