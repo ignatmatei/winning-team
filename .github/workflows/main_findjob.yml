@@ -42,11 +42,11 @@ jobs:
         with:
           name: bash-scripts
           path: '${{ github.workspace }}/api/*.sh'
-      - name: Upload yml
+      - name: Upload requirements
         uses: actions/upload-artifact@v3
         with:
           name: environment
-          path: '${{ github.workspace }}/*.yml'
+          path: '${{ github.workspace }}/*.txt'
 
   deploy:
     runs-on: ubuntu-latest
@@ -68,7 +68,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: bash-scripts
-      - name: Download yml
+      - name: Download requirements
         uses: actions/download-artifact@v3
         with:
           name: environment

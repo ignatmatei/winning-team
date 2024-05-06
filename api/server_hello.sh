@@ -1,2 +1,2 @@
 #/bin/bash
-/root/miniconda/bin/conda run -n base python test.py "$1"
+/root/miniconda/bin/conda run -n base python site/wwwroot/test.py "$1"
