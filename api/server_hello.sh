@@ -1,2 +1,2 @@
 #/bin/bash
-conda run -n mate python test.py "$1"
+/root/miniconda/bin/conda run -n base python test.py "$1"

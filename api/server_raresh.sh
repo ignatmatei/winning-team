@@ -1,2 +1,2 @@
 #/bin/bash
-conda run -n mate python lama.py "$1"
+/root/miniconda/bin/conda run -n base python lama.py "$1"
