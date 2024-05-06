@@ -61,20 +61,6 @@ public class UserController {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, String> map = mapper.readValue(jsonString, Map.class);
             String prompt1 = map.get("prompt");
-           /* ProcessBuilder ls = new ProcessBuilder("ls", "-lh" , "home/site/wwwroot/");
-            Process process1 =  ls.start();
-            BufferedReader reader1 = new BufferedReader(new InputStreamReader(process1.getInputStream()));
-            String line1;
-            StringBuilder output1 = new StringBuilder();
-            while ((line1 = reader1.readLine()) != null) {
-                output1.append(line1 + "\n");
-            }
-            int exitCode1 = process1.waitFor();
-            if (exitCode1 == 0) {
-                return ResponseEntity.ok(output1.toString());
-            } else {
-                return ResponseEntity.ok("exitCode " + exitCode1);
-            }*/
             ProcessBuilder processBuilder = new ProcessBuilder("./home/site/wwwroot/server_raresh.sh","\"" + prompt1 + "\"");
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
@@ -109,8 +95,7 @@ public class UserController {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, String> map = mapper.readValue(jsonString, Map.class);
             String prompt1 = map.get("prompt");
-            ProcessBuilder processBuilder = new ProcessBuilder("./server_hello.sh","\"" + prompt1 + "\"");
-            // ProcessBuilder processBuilder = new ProcessBuilder("./raresh.sh", prompt1);
+            ProcessBuilder processBuilder = new ProcessBuilder("./home/site/wwwroot/server_hello.sh","\"" + prompt1 + "\"");
             StringBuilder output = new StringBuilder();
             Process process = processBuilder.start();
             BufferedReader reader = new BufferedReader(
